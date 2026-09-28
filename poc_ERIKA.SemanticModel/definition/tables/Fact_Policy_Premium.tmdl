@@ -9,7 +9,7 @@ table Fact_Policy_Premium
 		formatString: 0
 		lineageTag: 760038ea-f38b-46dd-878d-dd7619682d9d
 		sourceLineageTag: CustomerKey
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: CustomerKey
 
 		annotation SummarizationSetBy = Automatic
@@ -20,7 +20,7 @@ table Fact_Policy_Premium
 		formatString: 0
 		lineageTag: c06fc819-5f12-42e2-8af3-4980727ee3b3
 		sourceLineageTag: LocationKey
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: LocationKey
 
 		annotation SummarizationSetBy = Automatic
@@ -31,7 +31,7 @@ table Fact_Policy_Premium
 		formatString: 0
 		lineageTag: 82ffc1da-929d-4bb7-9eed-476f6d869b94
 		sourceLineageTag: PolicyKey
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: PolicyKey
 
 		annotation SummarizationSetBy = Automatic
@@ -42,7 +42,7 @@ table Fact_Policy_Premium
 		formatString: 0
 		lineageTag: 9e93404f-dd76-4e77-ab35-58944b12f638
 		sourceLineageTag: CoverageKey
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: CoverageKey
 
 		annotation SummarizationSetBy = Automatic
@@ -53,7 +53,7 @@ table Fact_Policy_Premium
 		formatString: 0
 		lineageTag: 15d9208f-237f-4373-a28c-f69407906443
 		sourceLineageTag: PolicyStartDateKey
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: PolicyStartDateKey
 
 		annotation SummarizationSetBy = Automatic
@@ -64,7 +64,7 @@ table Fact_Policy_Premium
 		formatString: 0
 		lineageTag: bfe4d764-9423-44c4-8f8d-a76e99af7bc4
 		sourceLineageTag: PolicyEndDateKey
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: PolicyEndDateKey
 
 		annotation SummarizationSetBy = Automatic

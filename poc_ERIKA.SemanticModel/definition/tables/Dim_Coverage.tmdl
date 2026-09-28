@@ -9,7 +9,7 @@ table Dim_Coverage
 		formatString: 0
 		lineageTag: 358280ae-1d41-46cc-8b35-f5b5c41e502a
 		sourceLineageTag: CoverageKey
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: CoverageKey
 
 		annotation SummarizationSetBy = Automatic
@@ -20,7 +20,7 @@ table Dim_Coverage
 		formatString: 0
 		lineageTag: da4f0cce-c2e0-42ad-9c66-39b6302448d9
 		sourceLineageTag: CoverageID
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: CoverageID
 
 		annotation SummarizationSetBy = Automatic
@@ -42,7 +42,7 @@ table Dim_Coverage
 		formatString: 0
 		lineageTag: 92d89dda-819b-458b-8c72-bf8b06288902
 		sourceLineageTag: CoverageNumber
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: CoverageNumber
 
 		annotation SummarizationSetBy = Automatic

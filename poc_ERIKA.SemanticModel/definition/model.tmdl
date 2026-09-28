@@ -16,9 +16,7 @@ ref table Fact_Claim_Snapshot_Daily
 ref table Dim_Customer
 ref table Dim_Location
 ref table Dim_Policy
-ref table Dim_Snapshot_Policy
 ref table Dim_Coverage
 ref table Dim_Date
-ref table Dim_Snapshot_Date
 ref table Fact_Policy_Premium
 ref table Fact_Claim

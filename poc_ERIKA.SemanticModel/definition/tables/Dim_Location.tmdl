@@ -9,7 +9,7 @@ table Dim_Location
 		formatString: 0
 		lineageTag: 0ebab000-95dd-41a8-8bcf-1723304935f0
 		sourceLineageTag: LocationKey
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: LocationKey
 
 		annotation SummarizationSetBy = Automatic
@@ -20,7 +20,7 @@ table Dim_Location
 		formatString: 0
 		lineageTag: f2d297a5-59fb-4279-b302-bd89b6dbdaf3
 		sourceLineageTag: LocationID
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: LocationID
 
 		annotation SummarizationSetBy = Automatic

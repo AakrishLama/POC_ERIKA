@@ -9,7 +9,7 @@ table Dim_Date
 		formatString: 0
 		lineageTag: 0da97fd0-c93d-4b92-b0c3-f188d97eb51d
 		sourceLineageTag: DateKey
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: DateKey
 
 		annotation SummarizationSetBy = Automatic

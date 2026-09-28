@@ -9,7 +9,7 @@ table Dim_Customer
 		formatString: 0
 		lineageTag: 8ff0896e-28b4-47cc-a46a-8c602aed166a
 		sourceLineageTag: CustomerKey
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: CustomerKey
 
 		annotation SummarizationSetBy = Automatic
@@ -20,7 +20,7 @@ table Dim_Customer
 		formatString: 0
 		lineageTag: 3b710c20-ca1d-46ef-9e88-ad3b79afb4d1
 		sourceLineageTag: CustomerNumber
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: CustomerNumber
 
 		annotation SummarizationSetBy = Automatic
@@ -81,7 +81,7 @@ table Dim_Customer
 		formatString: 0
 		lineageTag: 42d4c19a-2d99-4a9d-b6ca-dcba1ea3f153
 		sourceLineageTag: BillingMethodCode
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: BillingMethodCode
 
 		annotation SummarizationSetBy = Automatic

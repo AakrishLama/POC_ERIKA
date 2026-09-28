@@ -9,7 +9,7 @@ table Fact_Claim_Snapshot_Daily
 		formatString: 0
 		lineageTag: 40913ada-935a-4b45-bc88-bdea7fb0a98d
 		sourceLineageTag: SnapshotDateKey
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: SnapshotDateKey
 
 		annotation SummarizationSetBy = Automatic
@@ -20,7 +20,7 @@ table Fact_Claim_Snapshot_Daily
 		formatString: 0
 		lineageTag: 649b454a-f3c6-41bc-8a62-d6bdbb67a2e0
 		sourceLineageTag: ClaimKey
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: ClaimKey
 
 		annotation SummarizationSetBy = Automatic
@@ -31,7 +31,7 @@ table Fact_Claim_Snapshot_Daily
 		formatString: 0
 		lineageTag: 4becb023-5fae-4ea6-b2ec-b8835418a979
 		sourceLineageTag: PolicyKey
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: PolicyKey
 
 		annotation SummarizationSetBy = Automatic

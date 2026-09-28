@@ -56,17 +56,18 @@ relationship 'Dim_Date Close Date to Fact_Claim'
 	fromColumn: Fact_Claim.CloseDateKey
 	toColumn: Dim_Date.DateKey
 
-relationship 'Dim_Snapshot_Policy to Fact_Claim_Snapshot_Daily'
+relationship 'Dim_Policy to Fact_Claim_Snapshot_Daily'
 	crossFilteringBehavior: oneDirection
 	fromColumn: Fact_Claim_Snapshot_Daily.PolicyKey
-	toColumn: Dim_Snapshot_Policy.PolicyKey
+	toColumn: Dim_Policy.PolicyKey
 
-relationship 'Dim_Snapshot_Date to Fact_Claim_Snapshot_Daily'
+relationship 'Dim_Date to Fact_Claim_Snapshot_Daily'
 	crossFilteringBehavior: oneDirection
 	fromColumn: Fact_Claim_Snapshot_Daily.SnapshotDateKey
-	toColumn: Dim_Snapshot_Date.DateKey
+	toColumn: Dim_Date.DateKey
 
 relationship 'Fact_Claim to Fact_Claim_Snapshot_Daily'
+	isActive: false
 	crossFilteringBehavior: oneDirection
 	fromColumn: Fact_Claim_Snapshot_Daily.ClaimKey
 	toColumn: Fact_Claim.ClaimKey

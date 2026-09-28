@@ -9,7 +9,7 @@ table Dim_Policy
 		formatString: 0
 		lineageTag: 4d14c98a-927a-4aa9-825b-e791e80e5a49
 		sourceLineageTag: PolicyKey
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: PolicyKey
 
 		annotation SummarizationSetBy = Automatic
@@ -20,7 +20,7 @@ table Dim_Policy
 		formatString: 0
 		lineageTag: 7ec73c4d-f90a-469f-941d-07c437560251
 		sourceLineageTag: PolicyID
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: PolicyID
 
 		annotation SummarizationSetBy = Automatic
@@ -63,7 +63,7 @@ table Dim_Policy
 		formatString: 0
 		lineageTag: e440748a-e6b8-4840-bc86-08e757d91592
 		sourceLineageTag: ProductID
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: ProductID
 
 		annotation SummarizationSetBy = Automatic

@@ -9,7 +9,7 @@ table Fact_Claim
 		formatString: 0
 		lineageTag: 3796c8dc-225b-4c42-b539-dfc1c1aa67d6
 		sourceLineageTag: ClaimKey
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: ClaimKey
 
 		annotation SummarizationSetBy = Automatic
@@ -20,7 +20,7 @@ table Fact_Claim
 		formatString: 0
 		lineageTag: d53a9807-870b-4688-b264-d0df7ab45e91
 		sourceLineageTag: ClaimNumber
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: ClaimNumber
 
 		annotation SummarizationSetBy = Automatic
@@ -31,7 +31,7 @@ table Fact_Claim
 		formatString: 0
 		lineageTag: 3dc350d9-a225-4d26-8224-b978607f9c77
 		sourceLineageTag: CustomerKey
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: CustomerKey
 
 		annotation SummarizationSetBy = Automatic
@@ -42,7 +42,7 @@ table Fact_Claim
 		formatString: 0
 		lineageTag: b50711a5-1314-4bf8-8b23-ec888276f101
 		sourceLineageTag: PolicyKey
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: PolicyKey
 
 		annotation SummarizationSetBy = Automatic
@@ -53,7 +53,7 @@ table Fact_Claim
 		formatString: 0
 		lineageTag: 863479a4-cd37-4c54-8382-4fd93c670848
 		sourceLineageTag: ClaimDateKey
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: ClaimDateKey
 
 		annotation SummarizationSetBy = Automatic
@@ -64,7 +64,7 @@ table Fact_Claim
 		formatString: 0
 		lineageTag: b9f18e12-bebb-4e3f-ab24-79b27fb2e1b8
 		sourceLineageTag: RegDateKey
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: RegDateKey
 
 		annotation SummarizationSetBy = Automatic
@@ -75,7 +75,7 @@ table Fact_Claim
 		formatString: 0
 		lineageTag: 2235c1f1-306d-457c-a34a-92c14be05683
 		sourceLineageTag: CloseDateKey
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: CloseDateKey
 
 		annotation SummarizationSetBy = Automatic
