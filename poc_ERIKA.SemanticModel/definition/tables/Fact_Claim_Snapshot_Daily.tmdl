@@ -65,5 +65,3 @@ table Fact_Claim_Snapshot_Daily
 			schemaName: star
 			expressionSource: 'DirectLake - poc_wh'
 
-
-

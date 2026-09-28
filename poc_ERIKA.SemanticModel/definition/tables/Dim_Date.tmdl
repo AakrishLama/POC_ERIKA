@@ -76,5 +76,3 @@ table Dim_Date
 			schemaName: star
 			expressionSource: 'DirectLake - poc_wh'
 
-
-

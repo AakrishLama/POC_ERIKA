@@ -120,5 +120,3 @@ table Fact_Policy_Premium
 			schemaName: star
 			expressionSource: 'DirectLake - poc_wh'
 
-
-

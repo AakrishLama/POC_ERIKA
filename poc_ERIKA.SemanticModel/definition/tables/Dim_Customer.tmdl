@@ -104,5 +104,3 @@ table Dim_Customer
 			schemaName: star
 			expressionSource: 'DirectLake - poc_wh'
 
-
-

@@ -20,3 +20,4 @@ ref table Dim_Coverage
 ref table Dim_Date
 ref table Fact_Policy_Premium
 ref table Fact_Claim
+
