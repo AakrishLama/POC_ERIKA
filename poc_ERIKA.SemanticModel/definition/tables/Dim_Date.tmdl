@@ -1,0 +1,80 @@
+/// Calendar date dimension.
+table Dim_Date
+	lineageTag: ba67c2fe-84d5-47f9-bf84-06c8b3a9c0dd
+	sourceLineageTag: [star].[Dim_Date]
+
+	/// Generated: YYYYMMDD integer format
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 0da97fd0-c93d-4b92-b0c3-f188d97eb51d
+		sourceLineageTag: DateKey
+		summarizeBy: count
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Generated: Calendar Date
+	column FullDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f0a5b36a-c3a9-4447-9337-5d033da9e42d
+		sourceLineageTag: FullDate
+		summarizeBy: none
+		sourceColumn: FullDate
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Generated: Year component
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 56a3d834-106e-4e9a-809f-b992d1003667
+		sourceLineageTag: Year
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Generated: Month component
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 326077ed-3d71-46d3-a6bb-29eb065d74de
+		sourceLineageTag: Month
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Generated: Day component
+	column Day
+		dataType: int64
+		formatString: 0
+		lineageTag: 7ff2e2e4-f412-40a9-b13c-8b2a653f7318
+		sourceLineageTag: Day
+		summarizeBy: sum
+		sourceColumn: Day
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Generated: Business logic (weekend/holiday flag)
+	column IsWorkingDay
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 50b92154-4a94-4f2c-a9cc-6b3bba6ab69b
+		sourceLineageTag: IsWorkingDay
+		summarizeBy: none
+		sourceColumn: IsWorkingDay
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Date = entity
+		mode: directLake
+		source
+			entityName: Dim_Date
+			schemaName: star
+			expressionSource: 'DirectLake - poc_wh'
+
+
+

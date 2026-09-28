@@ -1,0 +1,124 @@
+/// Claim fact table containing one row per claim.
+table Fact_Claim
+	lineageTag: 5b640bde-cfc2-448a-89ad-77fe466922a2
+	sourceLineageTag: [star].[Fact_Claim]
+
+	/// Generated Surrogate Key
+	column ClaimKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 3796c8dc-225b-4c42-b539-dfc1c1aa67d6
+		sourceLineageTag: ClaimKey
+		summarizeBy: count
+		sourceColumn: ClaimKey
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblskada.snr (Natural Key)
+	column ClaimNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: d53a9807-870b-4688-b264-d0df7ab45e91
+		sourceLineageTag: ClaimNumber
+		summarizeBy: sum
+		sourceColumn: ClaimNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Lookup: star.Dim_Customer via dbo.tblskada.knr
+	column CustomerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 3dc350d9-a225-4d26-8224-b978607f9c77
+		sourceLineageTag: CustomerKey
+		summarizeBy: count
+		sourceColumn: CustomerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Lookup: star.Dim_Policy via dbo.tblskada.fId
+	column PolicyKey
+		dataType: int64
+		formatString: 0
+		lineageTag: b50711a5-1314-4bf8-8b23-ec888276f101
+		sourceLineageTag: PolicyKey
+		summarizeBy: count
+		sourceColumn: PolicyKey
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Lookup: star.Dim_Date via dbo.tblskada.skadeDatum
+	column ClaimDateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 863479a4-cd37-4c54-8382-4fd93c670848
+		sourceLineageTag: ClaimDateKey
+		summarizeBy: count
+		sourceColumn: ClaimDateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Lookup: star.Dim_Date via dbo.tblskada.skadeRegDatum
+	column RegDateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: b9f18e12-bebb-4e3f-ab24-79b27fb2e1b8
+		sourceLineageTag: RegDateKey
+		summarizeBy: count
+		sourceColumn: RegDateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Lookup: star.Dim_Date via dbo.tblskada.sdatAvslut
+	column CloseDateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 2235c1f1-306d-457c-a34a-92c14be05683
+		sourceLineageTag: CloseDateKey
+		summarizeBy: count
+		sourceColumn: CloseDateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblskada.sstatus
+	column IsClosed
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 7edb2338-a9b9-4b42-ba28-0b976defbe38
+		sourceLineageTag: IsClosed
+		summarizeBy: none
+		sourceColumn: IsClosed
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblskada.sreserv
+	column CurrentReserveAmount
+		dataType: int64
+		formatString: 0
+		lineageTag: 57abb33e-9e3b-4732-9bdc-48f69c4d8e2b
+		sourceLineageTag: CurrentReserveAmount
+		summarizeBy: sum
+		sourceColumn: CurrentReserveAmount
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblskada.sregressFbelopp
+	column RegressionAmount
+		dataType: int64
+		formatString: 0
+		lineageTag: 036e0752-c01f-4fbb-899d-5f6f061f680c
+		sourceLineageTag: RegressionAmount
+		summarizeBy: sum
+		sourceColumn: RegressionAmount
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Fact_Claim = entity
+		mode: directLake
+		source
+			entityName: Fact_Claim
+			schemaName: star
+			expressionSource: 'DirectLake - poc_wh'
+
+
+

@@ -1,0 +1,69 @@
+/// Daily point-in-time claim snapshot fact table.
+table Fact_Claim_Snapshot_Daily
+	lineageTag: 7aa9befe-c0e3-442f-9387-446732ea8f1a
+	sourceLineageTag: [star].[Fact_Claim_Snapshot_Daily]
+
+	/// Generated: The specific day the snapshot is taken (YYYYMMDD)
+	column SnapshotDateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 40913ada-935a-4b45-bc88-bdea7fb0a98d
+		sourceLineageTag: SnapshotDateKey
+		summarizeBy: count
+		sourceColumn: SnapshotDateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Lookup: star.Fact_Claim.ClaimKey
+	column ClaimKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 649b454a-f3c6-41bc-8a62-d6bdbb67a2e0
+		sourceLineageTag: ClaimKey
+		summarizeBy: count
+		sourceColumn: ClaimKey
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Lookup: star.Fact_Claim.PolicyKey
+	column PolicyKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 4becb023-5fae-4ea6-b2ec-b8835418a979
+		sourceLineageTag: PolicyKey
+		summarizeBy: count
+		sourceColumn: PolicyKey
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Captured: dbo.tblskada.sreserv on this exact day
+	column ReserveAtSnapshot
+		dataType: int64
+		formatString: 0
+		lineageTag: c14d947d-e0c0-495b-a290-e5c2554dc1bd
+		sourceLineageTag: ReserveAtSnapshot
+		summarizeBy: sum
+		sourceColumn: ReserveAtSnapshot
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Captured: dbo.tblskada.sstatus (Open=0, Closed=1) on this exact day
+	column StatusAtSnapshot
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 7e4b275c-8055-4cf2-8e57-bb52e612c597
+		sourceLineageTag: StatusAtSnapshot
+		summarizeBy: none
+		sourceColumn: StatusAtSnapshot
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Fact_Claim_Snapshot_Daily = entity
+		mode: directLake
+		source
+			entityName: Fact_Claim_Snapshot_Daily
+			schemaName: star
+			expressionSource: 'DirectLake - poc_wh'
+
+
+

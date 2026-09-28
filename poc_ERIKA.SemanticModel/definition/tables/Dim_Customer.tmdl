@@ -1,0 +1,108 @@
+/// Customer dimension.
+table Dim_Customer
+	lineageTag: 79c79b4a-bb7a-4de4-a5d9-28d4cf03706d
+	sourceLineageTag: [star].[Dim_Customer]
+
+	/// Generated Surrogate Key
+	column CustomerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 8ff0896e-28b4-47cc-a46a-8c602aed166a
+		sourceLineageTag: CustomerKey
+		summarizeBy: count
+		sourceColumn: CustomerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblkund.knr (Natural Key)
+	column CustomerNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 3b710c20-ca1d-46ef-9e88-ad3b79afb4d1
+		sourceLineageTag: CustomerNumber
+		summarizeBy: sum
+		sourceColumn: CustomerNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblkund.kpersOrgNr
+	column OrganizationOrSSN
+		dataType: string
+		lineageTag: ce1e6b6b-0d0d-40e7-9e67-dc2c073c3887
+		sourceLineageTag: OrganizationOrSSN
+		summarizeBy: none
+		sourceColumn: OrganizationOrSSN
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblkund.knamn
+	column CustomerName
+		dataType: string
+		lineageTag: 8f04de83-f739-43a5-888d-58d46e737e67
+		sourceLineageTag: CustomerName
+		summarizeBy: none
+		sourceColumn: CustomerName
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblkund.kadress
+	column Address
+		dataType: string
+		lineageTag: 3eb49118-b219-4d24-897c-d87972bd989b
+		sourceLineageTag: Address
+		summarizeBy: none
+		sourceColumn: Address
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblkund.kpostNr
+	column ZipCode
+		dataType: string
+		lineageTag: 734d0e21-0cae-48a9-b68f-6548d8ab7e60
+		sourceLineageTag: ZipCode
+		summarizeBy: none
+		sourceColumn: ZipCode
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblkund.kpostAdress
+	column City
+		dataType: string
+		lineageTag: b96fea1e-932d-4353-a79f-cdef06615814
+		sourceLineageTag: City
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblkund.kfaktureringsMetod
+	column BillingMethodCode
+		dataType: int64
+		formatString: 0
+		lineageTag: 42d4c19a-2d99-4a9d-b6ca-dcba1ea3f153
+		sourceLineageTag: BillingMethodCode
+		summarizeBy: count
+		sourceColumn: BillingMethodCode
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Derived: 1 if dbo.tblkund.kgallringsdatum is NULL/future
+	column IsActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: ab9f5296-b6dc-4753-8dec-f6e218f692b3
+		sourceLineageTag: IsActive
+		summarizeBy: none
+		sourceColumn: IsActive
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Customer = entity
+		mode: directLake
+		source
+			entityName: Dim_Customer
+			schemaName: star
+			expressionSource: 'DirectLake - poc_wh'
+
+
+

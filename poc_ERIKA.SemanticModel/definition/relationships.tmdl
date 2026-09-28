@@ -1,0 +1,72 @@
+relationship 'Dim_Customer to Fact_Policy_Premium'
+	crossFilteringBehavior: oneDirection
+	fromColumn: Fact_Policy_Premium.CustomerKey
+	toColumn: Dim_Customer.CustomerKey
+
+relationship 'Dim_Location to Fact_Policy_Premium'
+	crossFilteringBehavior: oneDirection
+	fromColumn: Fact_Policy_Premium.LocationKey
+	toColumn: Dim_Location.LocationKey
+
+relationship 'Dim_Policy to Fact_Policy_Premium'
+	crossFilteringBehavior: oneDirection
+	fromColumn: Fact_Policy_Premium.PolicyKey
+	toColumn: Dim_Policy.PolicyKey
+
+relationship 'Dim_Coverage to Fact_Policy_Premium'
+	crossFilteringBehavior: oneDirection
+	fromColumn: Fact_Policy_Premium.CoverageKey
+	toColumn: Dim_Coverage.CoverageKey
+
+relationship 'Dim_Date Policy Start to Fact_Policy_Premium'
+	crossFilteringBehavior: oneDirection
+	fromColumn: Fact_Policy_Premium.PolicyStartDateKey
+	toColumn: Dim_Date.DateKey
+
+relationship 'Dim_Date Policy End to Fact_Policy_Premium'
+	isActive: false
+	crossFilteringBehavior: oneDirection
+	fromColumn: Fact_Policy_Premium.PolicyEndDateKey
+	toColumn: Dim_Date.DateKey
+
+relationship 'Dim_Customer to Fact_Claim'
+	crossFilteringBehavior: oneDirection
+	fromColumn: Fact_Claim.CustomerKey
+	toColumn: Dim_Customer.CustomerKey
+
+relationship 'Dim_Policy to Fact_Claim'
+	crossFilteringBehavior: oneDirection
+	fromColumn: Fact_Claim.PolicyKey
+	toColumn: Dim_Policy.PolicyKey
+
+relationship 'Dim_Date Claim Date to Fact_Claim'
+	crossFilteringBehavior: oneDirection
+	fromColumn: Fact_Claim.ClaimDateKey
+	toColumn: Dim_Date.DateKey
+
+relationship 'Dim_Date Registration Date to Fact_Claim'
+	isActive: false
+	crossFilteringBehavior: oneDirection
+	fromColumn: Fact_Claim.RegDateKey
+	toColumn: Dim_Date.DateKey
+
+relationship 'Dim_Date Close Date to Fact_Claim'
+	isActive: false
+	crossFilteringBehavior: oneDirection
+	fromColumn: Fact_Claim.CloseDateKey
+	toColumn: Dim_Date.DateKey
+
+relationship 'Dim_Snapshot_Policy to Fact_Claim_Snapshot_Daily'
+	crossFilteringBehavior: oneDirection
+	fromColumn: Fact_Claim_Snapshot_Daily.PolicyKey
+	toColumn: Dim_Snapshot_Policy.PolicyKey
+
+relationship 'Dim_Snapshot_Date to Fact_Claim_Snapshot_Daily'
+	crossFilteringBehavior: oneDirection
+	fromColumn: Fact_Claim_Snapshot_Daily.SnapshotDateKey
+	toColumn: Dim_Snapshot_Date.DateKey
+
+relationship 'Fact_Claim to Fact_Claim_Snapshot_Daily'
+	crossFilteringBehavior: oneDirection
+	fromColumn: Fact_Claim_Snapshot_Daily.ClaimKey
+	toColumn: Fact_Claim.ClaimKey

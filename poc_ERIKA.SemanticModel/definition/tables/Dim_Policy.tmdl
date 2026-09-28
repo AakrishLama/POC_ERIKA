@@ -1,0 +1,112 @@
+/// Policy dimension.
+table Dim_Policy
+	lineageTag: 961e3547-b7f0-4562-8a8e-47d6c76db4aa
+	sourceLineageTag: [star].[Dim_Policy]
+
+	/// Generated Surrogate Key
+	column PolicyKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 4d14c98a-927a-4aa9-825b-e791e80e5a49
+		sourceLineageTag: PolicyKey
+		summarizeBy: count
+		sourceColumn: PolicyKey
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblforsakring.fId (Natural Key)
+	column PolicyID
+		dataType: int64
+		formatString: 0
+		lineageTag: 7ec73c4d-f90a-469f-941d-07c437560251
+		sourceLineageTag: PolicyID
+		summarizeBy: count
+		sourceColumn: PolicyID
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblforsakring.fedition
+	column PolicyEdition
+		dataType: int64
+		formatString: 0
+		lineageTag: a818d09e-4ce2-4658-b6cc-5b0434a5d6c7
+		sourceLineageTag: PolicyEdition
+		summarizeBy: sum
+		sourceColumn: PolicyEdition
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblforsakring.fbklass
+	column BuildingClass
+		dataType: string
+		lineageTag: 2d7365de-0c87-4c11-b181-adc830219b8a
+		sourceLineageTag: BuildingClass
+		summarizeBy: none
+		sourceColumn: BuildingClass
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblforsakring.fverksamhet
+	column IndustryActivity
+		dataType: int64
+		formatString: 0
+		lineageTag: 370f3c14-3101-4ee9-ab61-bedfc017e21f
+		sourceLineageTag: IndustryActivity
+		summarizeBy: sum
+		sourceColumn: IndustryActivity
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblforsakring.fproduktId
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: e440748a-e6b8-4840-bc86-08e757d91592
+		sourceLineageTag: ProductID
+		summarizeBy: count
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblforsakring.fdatFrom
+	column ValidFromDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9dbbbf90-9941-485a-8780-2b2041545631
+		sourceLineageTag: ValidFromDate
+		summarizeBy: none
+		sourceColumn: ValidFromDate
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblforsakring.fdatTill
+	column ValidToDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7b3db668-1c64-4587-967d-e05b0258c2a7
+		sourceLineageTag: ValidToDate
+		summarizeBy: none
+		sourceColumn: ValidToDate
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Derived: 1 if latest edition, else 0
+	column IsCurrent
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 54320768-d41c-4f81-b82a-77748db63450
+		sourceLineageTag: IsCurrent
+		summarizeBy: none
+		sourceColumn: IsCurrent
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Policy = entity
+		mode: directLake
+		source
+			entityName: Dim_Policy
+			schemaName: star
+			expressionSource: 'DirectLake - poc_wh'
+
+
+

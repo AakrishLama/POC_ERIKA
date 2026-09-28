@@ -1,0 +1,96 @@
+/// Location dimension.
+table Dim_Location
+	lineageTag: 50fd9403-3083-4e83-9cd0-aa8e905e3c23
+	sourceLineageTag: [star].[Dim_Location]
+
+	/// Generated Surrogate Key
+	column LocationKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 0ebab000-95dd-41a8-8bcf-1723304935f0
+		sourceLineageTag: LocationKey
+		summarizeBy: count
+		sourceColumn: LocationKey
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblfstalle.fsId (Natural Key)
+	column LocationID
+		dataType: int64
+		formatString: 0
+		lineageTag: f2d297a5-59fb-4279-b302-bd89b6dbdaf3
+		sourceLineageTag: LocationID
+		summarizeBy: count
+		sourceColumn: LocationID
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblfstalle.fskvarter
+	column PropertyBlock
+		dataType: string
+		lineageTag: f201a74c-17f2-47f3-87dd-81775e727d52
+		sourceLineageTag: PropertyBlock
+		summarizeBy: none
+		sourceColumn: PropertyBlock
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblfstalle.fshadress
+	column Address
+		dataType: string
+		lineageTag: 7cc1bec5-1d12-409b-aa62-7b0740a44f6b
+		sourceLineageTag: Address
+		summarizeBy: none
+		sourceColumn: Address
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblfstalle.fskommun
+	column Municipality
+		dataType: string
+		lineageTag: 3050d1d2-1816-48c9-b804-023a667684c0
+		sourceLineageTag: Municipality
+		summarizeBy: none
+		sourceColumn: Municipality
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblfstalle.fsobjekt
+	column ObjectDescription
+		dataType: string
+		lineageTag: 502610bf-e5aa-4e72-a08e-a3d50dfb482c
+		sourceLineageTag: ObjectDescription
+		summarizeBy: none
+		sourceColumn: ObjectDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblfstalle.fsgeoLatitud
+	column Latitude
+		dataType: string
+		lineageTag: 28239d22-d83f-4166-bcb7-48568e2e1fa8
+		sourceLineageTag: Latitude
+		summarizeBy: none
+		sourceColumn: Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Source: dbo.tblfstalle.fsgeoLongitud
+	column Longitude
+		dataType: string
+		lineageTag: ee83fbef-9d17-46e1-b849-ddefcc926396
+		sourceLineageTag: Longitude
+		summarizeBy: none
+		sourceColumn: Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Location = entity
+		mode: directLake
+		source
+			entityName: Dim_Location
+			schemaName: star
+			expressionSource: 'DirectLake - poc_wh'
+
+
+
